@@ -1,5 +1,5 @@
 Fondos App
-App Flutter para gestión de fondos. Integrada con Supabase.
+App Flutter para gestión de fondos.
 
 Arquitectura
 MVVM (Model-View-ViewModel) + Feature-First
