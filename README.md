@@ -15,13 +15,6 @@ lib/
     ├── viewmodels/ # ViewModels (lógica de presentación y estado)
     └── widgets/    # Widgets reutilizables
 Configuración
-Supabase (.env)
-Copia el ejemplo: cp .env.example .env
-Edita .env con tu URL y publishable key de Supabase:
-SUPABASE_URL=https://tu-proyecto.supabase.co
-SUPABASE_PUBLIC_KEY=sb_publishable_xxx
-También acepta SUPABASE_ANON_KEY (legacy). La publishable key se obtiene en Dashboard → API Keys.
-
 Ejecutar
 flutter pub get
 flutter run
@@ -38,8 +31,6 @@ dart run build_runner watch --delete-conflicting-outputs
 
 Dependencias principales
 provider - State management (MVVM)
-supabase_flutter - Backend
 go_router - Navegación
-get_it - Inyección de dependencias
 equatable - Igualdad de objetos
 json_annotation / json_serializable - Serialización JSON (modelos)
