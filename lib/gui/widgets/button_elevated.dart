@@ -1,3 +1,4 @@
+// ignore_for_file: file_names
 import 'package:flutter/material.dart';
 
 class GenericButton extends StatelessWidget {
@@ -37,13 +38,11 @@ class GenericButton extends StatelessWidget {
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: imageRoute != null
-              ? MainAxisAlignment.start
-              : MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            if (imageRoute != null) imageRoute!,
-            if (imageRoute != null) const SizedBox(width: 20),
             Text(text, style: textStyle, maxLines: 2),
+            if (imageRoute != null) const SizedBox(width: 20),
+            if (imageRoute != null) imageRoute!,
           ],
         ),
         onPressed: () {

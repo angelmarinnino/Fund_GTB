@@ -1,5 +1,4 @@
 import 'package:fondos_app/gui/views/list_funds/funds_view.dart';
-import 'package:fondos_app/gui/views/transaction_history_view.dart';
 import 'package:go_router/go_router.dart';
 
 /// Application routes.

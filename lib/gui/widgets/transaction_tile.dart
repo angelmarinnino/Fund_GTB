@@ -8,7 +8,7 @@ class TransactionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isSubscription = transaction.type == TransactionType.suscripcion;
+    final isSubscription = transaction.transactionType == TransactionType.subscription;
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
@@ -45,12 +45,12 @@ class TransactionTile extends StatelessWidget {
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 4),
+            SizedBox(height: 4),
             Text(transaction.description),
-            const SizedBox(height: 4),
+            SizedBox(height: 4),
             Text(
-              '${transaction.date.day}/${transaction.date.month}/${transaction.date.year}',
-              style: const TextStyle(fontSize: 12, color: Colors.grey),
+              '${transaction.date?.day ?? 0}/${transaction.date?.month ?? 0}/${transaction.date?.year ?? 0}',
+              style: TextStyle(fontSize: 12, color: Colors.grey),
             ),
           ],
         ),
@@ -65,9 +65,9 @@ class TransactionTile extends StatelessWidget {
                 color: isSubscription ? Colors.green[800] : Colors.red[800],
               ),
             ),
-            const SizedBox(height: 4),
+            SizedBox(height: 4),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
                 color: isSubscription ? Colors.green[50] : Colors.red[50],
                 borderRadius: BorderRadius.circular(8),

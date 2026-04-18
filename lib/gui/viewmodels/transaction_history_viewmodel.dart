@@ -35,29 +35,29 @@ class TransactionHistoryViewModel extends ChangeNotifier {
       filteredTransactions = transactions;
     } else if (filterType == 'Suscripciones') {
       filteredTransactions = transactions
-          .where((tx) => tx.type == TransactionType.suscripcion)
+            .where((tx) => tx.transactionType == TransactionType.subscription)
           .toList();
     } else {
       filteredTransactions = transactions
-          .where((tx) => tx.type == TransactionType.cancelacion)
+          .where((tx) => tx.transactionType == TransactionType.cancellation)
           .toList();
     }
     notifyListeners();
   }
 
   String tipoTexto(TransactionType type) {
-    return type == TransactionType.suscripcion ? 'Suscripción' : 'Cancelación';
+    return type == TransactionType.subscription ? 'Suscripción' : 'Cancelación';
   }
 
   double totalSuscripciones() {
     return transactions
-        .where((tx) => tx.type == TransactionType.suscripcion)
+        .where((tx) => tx.transactionType == TransactionType.subscription)
         .fold(0, (sum, tx) => sum + tx.amount);
   }
 
   double totalCancelaciones() {
     return transactions
-        .where((tx) => tx.type == TransactionType.cancelacion)
+          .where((tx) => tx.transactionType == TransactionType.cancellation)
         .fold(0, (sum, tx) => sum + tx.amount);
   }
 

@@ -13,7 +13,7 @@ class TransactionRepositoryImpl implements TransactionRepository {
       TransactionModel(
         id: 1,
         fundName: 'FPV_BTG_PACTUAL_RECAUDADORA',
-        type: TransactionType.suscripcion,
+        transactionType: TransactionType.subscription,
         amount: 150000,
         date: DateTime.now().subtract(const Duration(days: 1)),
         description: 'Suscripción inicial al fondo',
@@ -21,7 +21,7 @@ class TransactionRepositoryImpl implements TransactionRepository {
       TransactionModel(
         id: 2,
         fundName: 'FPV_BTG_PACTUAL_RECAUDADORA',
-        type: TransactionType.cancelacion,
+        transactionType: TransactionType.cancellation,
         amount: 50000,
         date: DateTime.now().subtract(const Duration(days: 2)),
         description: 'Cancelación parcial de inversión',
@@ -29,7 +29,7 @@ class TransactionRepositoryImpl implements TransactionRepository {
       TransactionModel(
         id: 3,
         fundName: 'FPV_BTG_PACTUAL_RECAUDADORA',
-        type: TransactionType.suscripcion,
+        transactionType: TransactionType.subscription,
         amount: 100000,
         date: DateTime.now().subtract(const Duration(days: 8)),
         description: 'Aportación mensual programada',
@@ -37,7 +37,7 @@ class TransactionRepositoryImpl implements TransactionRepository {
       TransactionModel(
         id: 4,
         fundName: 'FPV_BTG_PACTUAL_ECOPEROL',
-        type: TransactionType.suscripcion,
+        transactionType: TransactionType.subscription,
         amount: 200000,
         date: DateTime.now().subtract(const Duration(days: 3)),
         description: 'Suscripción a fondo ecológico',
@@ -45,7 +45,7 @@ class TransactionRepositoryImpl implements TransactionRepository {
       TransactionModel(
         id: 5,
         fundName: 'FDO-ACCIONES',
-        type: TransactionType.cancelacion,
+        transactionType: TransactionType.cancellation,
         amount: 120000,
         date: DateTime.now().subtract(const Duration(days: 5)),
         description: 'Cancelación de posición por venta',
@@ -53,7 +53,7 @@ class TransactionRepositoryImpl implements TransactionRepository {
       TransactionModel(
         id: 6,
         fundName: 'FPV_BTG_PACTUAL_RECAUDADORA',
-        type: TransactionType.cancelacion,
+        transactionType: TransactionType.cancellation,
         amount: 25000,
         date: DateTime.now().subtract(const Duration(days: 12)),
         description: 'Retiro parcial por emergencia',
